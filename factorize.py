@@ -15,7 +15,9 @@ def factorize(n: int):
 
     # 3 以降
     for facter in range(3, n + 1, 2):
-        if facter > n:
+        if facter * facter > n:
+            if n > 1:
+                arr.append((n, 1))
             break
         count = 0
         while n % facter == 0:
@@ -28,6 +30,6 @@ def factorize(n: int):
 
 
 if __name__ == "__main__":
-    n = 9973 * (2 * 3 * 5) ** 8
+    n = 2**4 * 1000000007
     print(n)
     print(factorize(n))
