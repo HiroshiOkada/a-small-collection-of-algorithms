@@ -18,9 +18,9 @@ def sieve(n: int):
     flags = np.array([True for i in range(3, n + 1, 2)])
     for i in range(len(flags)):
         if flags[i]:
-            n = i * 2 + 3
-            primes.append(n)
-            flags[i::n] = False
+            prime = i * 2 + 3
+            primes.append(prime)
+            flags[i::prime] = False
     return primes
 
 
